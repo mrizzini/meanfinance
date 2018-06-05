@@ -1,1 +1,0 @@
-var stockAPIKEY = "W1MQA4XVBOFMKMER";

@@ -2,8 +2,9 @@
 database
 
 # API Key
+/key.js
 
-/agile/meanfinance/api/controllers/shared/key.js
+
 
 # Logs
 logs
