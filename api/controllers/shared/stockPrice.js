@@ -2,7 +2,7 @@
 var https = require('https');
 var _apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&apikey=stockAPIKEY&outputsize=compact"
 
-module.exports.getPrice = function(req, res, symbol) {
+module.exports.getPrice = function(req, res, symbol, stock) {
   
   var url = _apiUrl + "&symbol=" + symbol
   
@@ -32,9 +32,12 @@ module.exports.getPrice = function(req, res, symbol) {
         var stockData = data['Time Series (Daily)']
         var keys = Object.keys(stockData);
         var price = parseFloat(stockData[keys[0]]['4. close']);
+        console.log("LINE 34:" + stock);
+        
         res
           .status(200)
-          .json({"price" : price});
+          .json({"price" : price, "stock" : stock});
+          
       }
     }); 
   }); 
