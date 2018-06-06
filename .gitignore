@@ -1,6 +1,10 @@
 # Mongo Files
 database
 
+/key.js
++# API Key
++
++/agile/meanfinance/api/controllers/shared/key.js
 
 # Logs
 logs
