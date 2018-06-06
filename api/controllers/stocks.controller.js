@@ -21,9 +21,8 @@ module.exports.stocksGetPrice = function(req, res) {
       } else {
         //found the stock symbol it is a valid NASDAQ stock symbol pull data
         //from api.
-        var price = stockPrice.getPrice(req, res, symbol);
-        
+        var price = stockPrice.getPrice(req, res, symbol, stock);
+
       }
     })
-  
 }
