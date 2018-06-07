@@ -13,6 +13,12 @@
   <button type="submit" class="btn btn-success">find</button>
   
   <div>
-    <p>{{vm.symbol}} is currently priced at {{vm.stockprice | currency}}</p>
+    <h4>{{vm.symbol}} is currently priced at {{vm.stockprice | currency}}</h4>
+    <h4>Name: {{ vm.stockname }}</h4>
+    <h4>Last Sale: {{ vm.stocksale | currency }}</h4>
+    <h4>Sector: {{ vm.stocksector }}</h4>
+    <h4>Industry: {{ vm.stockindustry }}</h4>
+    <h4>IPO Year: {{ vm.stockyear }}</h4>
+    <h4>Summary: {{ vm.stocksummary }}</h4>
   </div>
 </form>
