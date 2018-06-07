@@ -1,4 +1,5 @@
 /*global $ stockAPIKEY*/
+
 var https = require('https');
 var _apiUrl = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&apikey=stockAPIKEY&outputsize=compact"
 
