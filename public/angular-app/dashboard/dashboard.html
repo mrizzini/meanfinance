@@ -8,14 +8,14 @@
   </thead>
   <tbody>
     <tr ng-repeat="stock in vm.stocks" ng-init="counter = 0">
-      <td>{{stock._id}}</td>
-      <td>{{stock.amount}}</td>
-      <td>{{vm.prices[counter++] | currency}}</td>
+      <td>{{ vm.symbol }}</td>
+      <td>{{ vm.amount }}</td>
+      <td>{{ vm.prices[counter++] | currency }}</td>
     </tr>
     <tr>
       <td></td>
       <td><strong>Total Balance</strong></td>
-      <td>{{vm.balance | currency}}</td>
+      <td>{{ vm.balance | currency }}</td>
     </tr>
   </tbody>
 </table>
