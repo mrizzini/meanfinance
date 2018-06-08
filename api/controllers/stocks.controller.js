@@ -33,8 +33,8 @@ module.exports.stocksGetAll = function(req, res) {
   console.log(req.query);
   
   var offset = 0;
-  var count = 20;
-  var maxCount = 50;
+  var count = 6578;
+  var maxCount = 6578;
   
   if (req.query && req.query.offset) {
     offset = parseInt(req.query.offset, 10);
