@@ -1,20 +1,27 @@
 <div class="overlay">
 <h1>{{ vm.title }}</h1>
-<!--<ul>-->
-<!--    <li ng-repeat="stock in vm.stocks"><a ng-href="#!/stocks/{{ stock._id }}">{{ stock.name }}</a></li>-->
-<!--</ul>-->
 
-<!--<table class="table">-->
-<!--    <tr ng-repeat = "stock in vm.stocks">-->
-<!--        <td>{{ stock.name }}</td>-->
-<!--    </tr>-->
-<!--</table>-->
+<h3>Search: <input name="searchBox" type="search" ng-model="query"></h3>
 
-<h3>Search for a specific stock: <input name="searchBox" type="search" ng-model="query"></h3>
+<dir-pagination-controls></dir-pagination-controls>
 
-<ul>
-    <li dir-paginate="stock in vm.stocks | filter: query | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock._id }}">{{ stock._id }} | {{ stock.name }} | {{ stock.sector }} | {{ stock.industry }}</a></li>
-</ul>
+<table class="table">
+    <th>Symbol</th>
+    <th>Name</th>
+    <th>Sector</th>
+    <th>Industry</th>
+    <th>Last Sale</th>
+    <th>Market Cap</th>
+    
+    <tr dir-paginate="stock in vm.stocks | filter: query | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock._id }}">
+        <td>{{ stock._id }}</td>
+        <td>{{ stock.name }}</td>
+        <td>{{ stock.sector }}</td>
+        <td>{{ stock.industry }}</td>
+        <td>{{ stock.lastSale | currency}}</td>
+        <td>{{ stock.markeCap }}</td>
+    </tr>
+</table>
 
 <dir-pagination-controls></dir-pagination-controls>
 
