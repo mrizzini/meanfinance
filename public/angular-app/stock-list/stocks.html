@@ -13,7 +13,7 @@
     <th>Last Sale</th>
     <th>Market Cap</th>
     
-    <tr dir-paginate="stock in vm.stocks | filter: query | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock._id }}">
+    <tr dir-paginate="stock in vm.stocks | filter: query | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock._id }}"></a>
         <td>{{ stock._id }}</td>
         <td>{{ stock.name }}</td>
         <td>{{ stock.sector }}</td>
