@@ -20,7 +20,8 @@ body {
 }
 
 #logo{
-    padding-top: 160px;
+    padding-top: 60px;
+    padding-bottom: 20px;
 }
 .parallax {
     /* The image used */
@@ -44,13 +45,13 @@ body {
 
 .overlay {
     background: white;
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
     border-radius: 25px;
 }
 
 .bumper {
     opacity: 0;
-    height: 300px;
+    height: 50px;
 }
 
