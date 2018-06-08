@@ -19,6 +19,10 @@ body {
     padding-top: 20px;
 }
 
+#logo{
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
 .parallax {
     /* The image used */
     background-image: url("/images/money.jpg");
@@ -41,13 +45,13 @@ body {
 
 .overlay {
     background: white;
-    margin: 10px;
+    margin: 30px;
     padding: 10px;
     border-radius: 25px;
 }
 
 .bumper {
     opacity: 0;
-    height: 300px;
+    height: 50px;
 }
 
