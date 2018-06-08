@@ -58,6 +58,14 @@ function config($httpProvider, $routeProvider) {
         restricted: true
       }
     })
+    .when('/stocks', {
+      templateUrl: 'angular-app/stock-list/stocks.html',
+      controller: StocksController,
+      controllerAs: 'vm',
+      access: {
+        restricted: false
+      }
+    })
     .otherwise({
       redirectTo: '/'
     });

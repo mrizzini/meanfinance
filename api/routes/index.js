@@ -23,6 +23,11 @@ router
 router
   .route('/users/:username')
   .get(usersCtrl.getUserBalance)
+
+// Adding route to stocks
+router
+  .route('/stocks')
+  .get(stocksCtrl.stocksGetAll);
   
 router
   .route('/stocks/:symbol')
