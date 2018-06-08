@@ -109,10 +109,11 @@ module.exports.getUserBalance = function(req, res) {
           .json(err);
       } else { 
         console.log('found user');
+        var mystocks = user.stocks
         var balance = user.balance
         res
           .status(200)
-          .json(balance)
+          .json({ "balance" : balance, "mystocks" : mystocks })
       }
     });
 }

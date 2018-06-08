@@ -13,11 +13,17 @@ function BuyController($http, $window, AuthFactory, jwtHelper, $location) {
       
       $http.post('/api/users/'+ username +"/stocks", data).then(function(response) {
         //check the responses
+        // Prompt user if Purchase is successful
+        vm.message = 'Successful Purchase!';
+        console.log(data);
+        
       }).catch(function(error) {
         console.log(error);
+        
       })
     } else {
       $location.path('/');
+      
     }
   }
 }

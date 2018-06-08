@@ -41,6 +41,7 @@ module.exports.bStocksGetAll = function(req, res) {
         res
           .status(200)
           .json({"stocks" : stocks, "prices" : prices})
+          console.log("STOCKS: " + stocks);
       }
     })
 }
