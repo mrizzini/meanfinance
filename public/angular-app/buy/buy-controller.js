@@ -12,7 +12,7 @@ function BuyController($http, $window, AuthFactory, jwtHelper, $location) {
       var data = {"symbol" : vm.symbol, "amount": vm.amount}
       
       // Validation so that user is unable to buy a negative amount of Stocks
-      if (vm.amount < 0) {
+      if (vm.amount <= 0) {
         alert("Please enter a Positive amount.")        
         }
       else {
