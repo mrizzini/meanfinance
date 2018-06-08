@@ -4,10 +4,19 @@
 <!--    <li ng-repeat="stock in vm.stocks"><a ng-href="#!/stocks/{{ stock._id }}">{{ stock.name }}</a></li>-->
 <!--</ul>-->
 
-<table class="table">
-    <tr ng-repeat = "stock in vm.stocks">
-        <td>{{ stock.name }}</td>
-    </tr>
-</table>
+<!--<table class="table">-->
+<!--    <tr ng-repeat = "stock in vm.stocks">-->
+<!--        <td>{{ stock.name }}</td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<h3>Search for a specific stock: <input name="searchBox" type="search" ng-model="query"></h3>
+
+<ul>
+    <li dir-paginate="stock in vm.stocks | filter: query | itemsPerPage: 25"><a ng-href="#!/stocks/{{ stock._id }}">{{ stock._id }} | {{ stock.name }} | {{ stock.sector }} | {{ stock.industry }}</a></li>
+</ul>
+
+<dir-pagination-controls></dir-pagination-controls>
+
 </div>
 <div class="bumper"></div>
