@@ -18,6 +18,10 @@ body {
     background-color: #fff;
     padding-top: 20px;
 }
+#pdfs {
+    margin: 100px;
+    max-width: 650px;
+}
 
 #logo{
     padding-top: 60px;
