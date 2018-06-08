@@ -8,8 +8,9 @@ function BuyController($http, $window, AuthFactory, jwtHelper, $location) {
       var token = $window.sessionStorage.token;
       var decodedToken = jwtHelper.decodeToken(token);
       var username = decodedToken.username;
+      var symbolUpper = vm.symbol.toUpperCase();
       
-      var data = {"symbol" : vm.symbol.toUpper(), "amount": vm.amount
+      var data = {"symbol" : symbolUpper, "amount": vm.amount
       }
       
       // Validation so that user is unable to buy a negative amount of Stocks
