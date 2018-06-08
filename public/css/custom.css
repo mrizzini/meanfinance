@@ -41,3 +41,16 @@ body {
         background-attachment: scroll;
     }
 }
+
+.overlay {
+    background: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.bumper {
+    opacity: 0;
+    height: 300px;
+}
+
