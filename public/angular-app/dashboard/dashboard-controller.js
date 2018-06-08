@@ -9,13 +9,14 @@ function DashboardController( $http, $window, AuthFactory, jwtHelper, $location)
     
     $http.get('/api/users/'+ username +"/stocks").then(function(response) {
       vm.stocks = response.data
-      console.log("INFO: " + vm.stocks.symbol);
       
     }).catch(function(error) {
       console.log(error);
     })
     $http.get('/api/users/' + username).then(function(response) {
-      vm.balance = response.data
+      vm.balance = response.data.balance
+      vm.mystocks = response.data.mystocks 
+      // Added my stocks that are purchased to dashboard
 
     })
   } else {
